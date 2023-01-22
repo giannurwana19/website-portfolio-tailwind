@@ -1,11 +1,16 @@
 window.onscroll = function () {
   const header = document.querySelector('header');
   const fixedNav = header.offsetTop; // posisi header thd posisi atas
+  const toTop = document.getElementById('to-top');
 
   if (window.pageYOffset > fixedNav) {
     header.classList.add('navbar-fixed');
+    toTop.classList.remove('hidden');
+    toTop.classList.add('flex');
   } else {
     header.classList.remove('navbar-fixed');
+    toTop.classList.add('hidden');
+    toTop.classList.remove('flex');
   }
 };
 
