@@ -22,5 +22,13 @@ hamburger.addEventListener('click', function () {
   navMenu.classList.toggle('hidden');
 });
 
+// klik di luar hamburger
+window.addEventListener('click', function (e) {
+  if (e.target !== hamburger && e.target != navMenu) {
+    hamburger.classList.remove('hamburger-active');
+    navMenu.classList.add('hidden');
+  }
+});
+
 console.log('offsetTop: ', document.querySelector('header').offsetTop);
 console.log('pageYOffset: ', window.pageYOffset);
