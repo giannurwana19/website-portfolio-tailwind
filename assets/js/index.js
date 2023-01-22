@@ -32,3 +32,15 @@ window.addEventListener('click', function (e) {
 
 console.log('offsetTop: ', document.querySelector('header').offsetTop);
 console.log('pageYOffset: ', window.pageYOffset);
+
+// dark mode toggle
+const darkToggle = document.getElementById('dark-toggle');
+const html = document.querySelector('html');
+
+darkToggle.addEventListener('click', function () {
+  if (darkToggle.checked) {
+    html.classList.add('dark');
+  } else {
+    html.classList.remove('dark');
+  }
+});
